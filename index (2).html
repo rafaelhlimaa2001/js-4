@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays, DOM e Eventos</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #f4f6f8;
+    }
+    main {
+      max-width: 640px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
+    }
+    h1 { margin-top: 0; color: #1f3a5f; }
+    h2 { color: #1f3a5f; font-size: 1.2rem; margin-top: 2rem; }
+
+    #lista { padding-left: 1.25rem; }
+    #lista li {
+      cursor: pointer;
+      padding: .25rem .5rem;
+      border-radius: 4px;
+    }
+    #lista li:hover { background: #eef2f7; }
+
+    .destaque { background: #fff3b0; font-weight: bold; }
+    .feito { text-decoration: line-through; color: #777; }
+
+    label { display: block; font-weight: bold; margin: 1rem 0 .25rem; }
+    input[type="text"] {
+      width: 100%;
+      padding: .6rem .75rem;
+      border: 1px solid #9fb0c6;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    button {
+      margin-top: .75rem;
+      padding: .6rem 1.2rem;
+      background: #2f855a;
+      color: #fff;
+      border: 0;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover { background: #276749; }
+  </style>
+</head>
+<body>
+
+  <main>
+    <h1 id="titulo">Título provisório</h1>
+
+    <p class="texto">Este é o primeiro parágrafo da página, usado para treinar o querySelectorAll.</p>
+    <p class="texto">Este é o segundo parágrafo: o JavaScript vai ler o texto de cada um e imprimir no console.</p>
+
+    <h2>Lista de itens (clique para marcar como feito)</h2>
+    <ul id="lista">
+      <li>Comprar pão</li>
+      <li>Estudar JavaScript</li>
+      <li>Ler um livro</li>
+    </ul>
+
+    <h2>Eventos</h2>
+    <button id="botao" type="button">Clique aqui</button>
+
+    <label for="nome">Digite seu nome (veja o console)</label>
+    <input type="text" id="nome" name="nome" autocomplete="off">
+
+    <h2>Adicionar tarefa</h2>
+    <form id="formulario">
+      <label for="tarefa">Nova tarefa</label>
+      <input type="text" id="tarefa" name="tarefa" placeholder="Ex.: Praticar eventos" autocomplete="off">
+      <button type="submit">Adicionar</button>
+    </form>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
